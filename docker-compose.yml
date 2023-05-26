@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+    php:
+        build:
+            context: .
+            dockerfile: docker/php/Dockerfile
+            args:
+                TIMEZONE: ${TIMEZONE}
+        container_name: sf6_php
+        volumes:
+            - .:/var/www/library/
+        networks:
+            - symfony
+    nginx:
+        build:
+            context: .
+            dockerfile: docker/nginx/Dockerfile
+        container_name: sf6_nginx
+        volumes:
+            - .:/var/www/library/
+        ports:
+            - 80:80
+        networks:
+            - symfony
+
+networks:
+    symfony:
