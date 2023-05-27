@@ -1,5 +1,3 @@
-controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
+routing:
+    resource: '../src/orders/list/infrastructure/config/routes.yaml'
+    type: yaml

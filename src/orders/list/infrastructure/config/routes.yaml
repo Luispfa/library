@@ -1,0 +1,3 @@
+App\orders\list\infrastructure\controller\GetListOrdersController:
+    resource: App\orders\list\infrastructure\controller\GetListOrdersController
+    type: attribute
