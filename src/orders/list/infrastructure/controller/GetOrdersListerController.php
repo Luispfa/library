@@ -7,9 +7,9 @@ namespace App\orders\list\infrastructure\controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 
-final class GetListOrdersController
+final class GetOrdersListerController
 {
-    #[Route('/list-orders', methods: ['GET'], name: 'list-orders')]
+    #[Route('/orders-lister', methods: ['GET'], name: 'orders-lister')]
     public function __invoke()
     {
         return new JsonResponse(['hola mundo']);
