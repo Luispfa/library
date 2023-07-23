@@ -6,5 +6,6 @@ namespace App\orders\list\domain;
 
 interface OrderRepository
 {
+    /** @var Order[] */
     public function searchAllOrders(): array;
 }
