@@ -12,13 +12,10 @@ use App\orders\list\domain\OrderRepository;
 
 use function Lambdish\Phunctional\map;
 
-final class OrdersLister
+final readonly class OrdersLister
 {
-    private $orderRespository;
-
-    public function __construct(OrderRepository $orderRepository)
+    public function __construct(private OrderRepository $orderRespository)
     {
-        $this->orderRespository = $orderRepository;
     }
 
     public function __invoke(): OrdersResponse
@@ -33,8 +30,10 @@ final class OrdersLister
 
     private function toResponse(): callable
     {
-        return static function (Order $order) {
-            return new OrderResponse($order->orderId(), $order->name(), $order->totalPrice());
-        };
+        return static fn (Order $order) => new OrderResponse(
+            $order->id,
+            $order->name,
+            $order->totalPrice
+        );
     }
 }

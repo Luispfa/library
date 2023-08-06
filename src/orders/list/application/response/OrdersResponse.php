@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\orders\list\application\response;
 
-final class OrdersResponse
+final readonly class OrdersResponse
 {
-    private $orders;
+    private array $orders;
 
     public function __construct(OrderResponse ...$orders)
     {
