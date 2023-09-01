@@ -1,3 +1,7 @@
-routing:
+orders_lister:
     resource: '../src/orders/list/infrastructure/config/routes.yaml'
+    type: yaml
+
+books_lister:
+    resource: '../src/books/list/infrastructure/config/routes.yaml'
     type: yaml

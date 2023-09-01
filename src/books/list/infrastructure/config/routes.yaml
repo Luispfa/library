@@ -1,0 +1,3 @@
+books\list\infrastructure\controller\GetBooksListerController:
+    resource: books\list\infrastructure\controller\GetBooksListerController
+    type: attribute
