@@ -15,4 +15,7 @@
 			</directory>
     </include>
   </source>
+  <php>
+    <server name="KERNEL_CLASS" value="App\Kernel" />
+  </php>
 </phpunit>
