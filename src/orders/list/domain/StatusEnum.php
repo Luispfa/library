@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\orders\list\domain;
+namespace orders\list\domain;
 
 enum StatusEnum: string
 {

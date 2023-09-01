@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace App\Tests\orders\list\application;
 
-use App\orders\list\application\OrdersLister;
-use App\orders\list\application\response\OrderResponse;
-use App\orders\list\application\response\OrdersResponse;
-use App\orders\list\domain\exception\OrdersNotFoundException;
-use App\orders\list\domain\Order;
-use App\orders\list\domain\OrderRepository;
+use orders\list\application\OrdersLister;
+use orders\list\application\response\OrderResponse;
+use orders\list\application\response\OrdersResponse;
+use orders\list\domain\exception\OrdersNotFoundException;
+use orders\list\domain\Order;
+use orders\list\domain\OrderRepository;
 use PHPUnit\Framework\TestCase;
 
 class OrdersListerTest extends TestCase

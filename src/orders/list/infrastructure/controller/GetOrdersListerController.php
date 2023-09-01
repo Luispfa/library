@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\orders\list\infrastructure\controller;
+namespace orders\list\infrastructure\controller;
 
-use App\orders\list\application\OrdersLister;
+use orders\list\application\OrdersLister;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;

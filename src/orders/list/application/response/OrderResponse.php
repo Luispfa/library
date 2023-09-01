@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\orders\list\application\response;
+namespace orders\list\application\response;
 
 final readonly class OrderResponse
 {

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\orders\list\application;
+namespace orders\list\application;
 
-use App\orders\list\application\response\OrderResponse;
-use App\orders\list\application\response\OrdersResponse;
-use App\orders\list\domain\exception\OrdersNotFoundException;
-use App\orders\list\domain\Order;
-use App\orders\list\domain\OrderRepository;
+use orders\list\application\response\OrderResponse;
+use orders\list\application\response\OrdersResponse;
+use orders\list\domain\exception\OrdersNotFoundException;
+use orders\list\domain\Order;
+use orders\list\domain\OrderRepository;
 
 use function Lambdish\Phunctional\map;
 

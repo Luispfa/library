@@ -1,9 +1,9 @@
 <?php
 
-namespace App\orders\list\infrastructure\repositories;
+namespace orders\list\infrastructure\repositories;
 
-use App\orders\list\domain\Order;
-use App\orders\list\domain\OrderRepository;
+use orders\list\domain\Order;
+use orders\list\domain\OrderRepository;
 
 class InFileOrderRepository implements OrderRepository
 {

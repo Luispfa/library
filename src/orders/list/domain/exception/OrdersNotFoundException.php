@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\orders\list\domain\exception;
+namespace orders\list\domain\exception;
 
 use RuntimeException;
 
