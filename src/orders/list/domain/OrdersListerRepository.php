@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace orders\list\domain;
 
-interface OrderRepository
+interface OrdersListerRepository
 {
-    /** @var Order[] */
     public function searchAllOrders(): array;
 }

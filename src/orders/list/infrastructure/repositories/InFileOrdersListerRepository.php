@@ -3,9 +3,9 @@
 namespace orders\list\infrastructure\repositories;
 
 use orders\list\domain\Order;
-use orders\list\domain\OrderRepository;
+use orders\list\domain\OrdersListerRepository;
 
-class InFileOrderRepository implements OrderRepository
+class InFileOrdersListerRepository implements OrdersListerRepository
 {
     private $orders = [];
 

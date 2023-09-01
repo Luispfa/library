@@ -9,14 +9,14 @@ use orders\list\application\response\OrderResponse;
 use orders\list\application\response\OrdersResponse;
 use orders\list\domain\exception\OrdersNotFoundException;
 use orders\list\domain\Order;
-use orders\list\domain\OrderRepository;
+use orders\list\domain\OrdersListerRepository;
 use PHPUnit\Framework\TestCase;
 
 class OrdersListerTest extends TestCase
 {
     public function test_should_return_list_of_orders(): void
     {
-        $orderRespository = $this->createMock(OrderRepository::class);
+        $orderRespository = $this->createMock(OrdersListerRepository::class);
         $orderRespository->expects(self::once())
             ->method('searchAllOrders')
             ->with()
@@ -38,7 +38,7 @@ class OrdersListerTest extends TestCase
     public function test_should_return_exception(): void
     {
         $this->expectException(OrdersNotFoundException::class);
-        $orderRespository = $this->createMock(OrderRepository::class);
+        $orderRespository = $this->createMock(OrdersListerRepository::class);
         $orderRespository
             ->expects(self::once())
             ->method('searchAllOrders')

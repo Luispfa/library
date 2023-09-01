@@ -8,13 +8,13 @@ use orders\list\application\response\OrderResponse;
 use orders\list\application\response\OrdersResponse;
 use orders\list\domain\exception\OrdersNotFoundException;
 use orders\list\domain\Order;
-use orders\list\domain\OrderRepository;
+use orders\list\domain\OrdersListerRepository;
 
 use function Lambdish\Phunctional\map;
 
 final readonly class OrdersLister
 {
-    public function __construct(private OrderRepository $orderRespository)
+    public function __construct(private OrdersListerRepository $orderRespository)
     {
     }
 
