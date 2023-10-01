@@ -16,3 +16,4 @@
 .phpunit.cache/test-results
 /composer.lock
 /symfony.lock
+/docker/db/data/
