@@ -26,4 +26,6 @@ stop:
 	docker-compose -f $(COMPOSE_FILE) down
 
 execute-tests:
+	set export APP_ENV=test
 	docker-compose -f $(COMPOSE_FILE) run php vendor/bin/phpunit $(if $(path), $(path), tests/)
+	set export APP_ENV=dev
