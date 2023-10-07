@@ -12,7 +12,6 @@ function ClearCache {
     $env:APP_ENV = "test"
     docker-compose -f $COMPOSE_FILE run php bin/console cache:clear --env=$(if ($env) { $env } else { "dev" })
     $env:APP_ENV = "dev"
-    Clean
 }
 
 function PrepareTest {
