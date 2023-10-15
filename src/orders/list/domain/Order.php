@@ -7,7 +7,7 @@ namespace orders\list\domain;
 final readonly class Order
 {
     private function __construct(
-        public int $id,
+        public string $id,
         public string $name,
         public string $email,
         public StatusEnum $status,
@@ -16,7 +16,7 @@ final readonly class Order
     }
 
     public static function create(
-        int $id,
+        string $id,
         string $name,
         string $email,
     ): self {

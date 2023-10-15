@@ -21,8 +21,8 @@ class OrdersListerTest extends TestCase
             ->method('searchAllOrders')
             ->with()
             ->willReturn([
-                Order::create(1, 'order 1', 'mail1@mail.com'),
-                Order::create(2, 'order 2', 'mail2@mail.com')
+                Order::create('1', 'order 1', 'mail1@mail.com'),
+                Order::create('2', 'order 2', 'mail2@mail.com')
             ]);
 
         $ordersLister = new OrdersLister($orderRespository);
@@ -30,7 +30,7 @@ class OrdersListerTest extends TestCase
 
         self::assertInstanceOf(OrdersResponse::class, $result);
         self::assertContainsOnlyInstancesOf(OrderResponse::class, $result->orders());
-        self::assertEquals($result->orders()[0]->id, 1);
+        self::assertEquals($result->orders()[0]->id, '1');
         self::assertEquals($result->orders()[0]->name, 'order 1');
         self::assertEquals($result->orders()[0]->totalPrice, 0);
     }
