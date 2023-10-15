@@ -6,11 +6,16 @@ namespace orders\list\domain;
 
 final readonly class Order
 {
+    const PENDING = 'Pending';
+    const CONFIRMED = 'Confirmed';
+    const SHIPPED = 'Shipped';
+    const DELIVERED = 'Delivered';
+
     private function __construct(
         public string $id,
         public string $name,
         public string $email,
-        public StatusEnum $status,
+        public string $status,
         public float $totalPrice
     ) {
     }
@@ -20,7 +25,7 @@ final readonly class Order
         string $name,
         string $email,
     ): self {
-        $status = StatusEnum::PENDING;
+        $status = static::PENDING;
         $totalPrice = 0;
         return new self($id, $name, $email, $status, $totalPrice);
     }

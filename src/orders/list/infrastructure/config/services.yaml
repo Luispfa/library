@@ -24,6 +24,6 @@ services:
     orders\list\infrastructure\controller\GetOrdersListerController:
         public: true
 
-    orders\list\domain\OrdersListerRespository:
+    orders\list\domain\OrdersListerRepository:
         alias: orders\list\infrastructure\repositories\DoctrineOrdersListerRepository
         # alias: orders\list\infrastructure\repositories\InFileOrdersListerRepository
