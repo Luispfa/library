@@ -23,3 +23,7 @@ services:
     # please note that last definitions always *replace* previous ones
     orders\list\infrastructure\controller\GetOrdersListerController:
         public: true
+
+    orders\list\domain\OrdersListerRespository:
+        alias: orders\list\infrastructure\repositories\DoctrineOrdersListerRepository
+        # alias: orders\list\infrastructure\repositories\InFileOrdersListerRepository
