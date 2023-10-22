@@ -26,8 +26,8 @@ class GetOrdersListerControllerTest extends WebTestCase
         self::assertArrayHasKey('name', $data[0]);
         self::assertArrayHasKey('totalPrice', $data[0]);
 
-        self::assertEquals('1', $data[0]['id']);
-        self::assertEquals('order 1 in File', $data[0]['name']);
+        self::assertEquals('68ba2622-c8da-41d7-9a5c-64a19214d7de', $data[0]['id']);
+        self::assertEquals('order 1 in dataBase', $data[0]['name']);
         self::assertEquals(0, $data[0]['totalPrice']);
     }
 }
