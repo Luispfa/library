@@ -9,11 +9,9 @@
             column="id">
             <generator strategy="NONE" />
         </id>
-        <field name="name"
-               type="string"
-               column="name"
-               length="255"
-               nullable="false" />
+        <embedded name="name"
+                  class="orders\list\domain\OrderName"
+                  use-column-prefix="false" />
         <field name="email"
                type="string"
                column="email"

@@ -18,7 +18,7 @@ doctrine:
             orders:
                 is_bundle: false
                 type: xml
-                dir: '%kernel.project_dir%/src/orders/list/infrastructure/repositories/persistence/doctrine'
+                dir: '%kernel.project_dir%/src/orders/list/infrastructure/repositories/persistence/doctrine/mapping'
                 prefix: 'orders\list\domain'
                 alias: orders
 
