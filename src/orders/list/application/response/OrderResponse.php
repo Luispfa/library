@@ -9,6 +9,7 @@ final readonly class OrderResponse
     public function __construct(
         public string $id,
         public string $name,
+        public string $email,
         public float $totalPrice
     ) {
     }

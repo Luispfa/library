@@ -9,6 +9,8 @@ use orders\list\application\response\OrderResponse;
 use orders\list\application\response\OrdersResponse;
 use orders\list\domain\exception\OrdersNotFoundException;
 use orders\list\domain\Order;
+use orders\list\domain\OrderEmail;
+use orders\list\domain\OrderName;
 use orders\list\domain\OrdersListerRepository;
 use PHPUnit\Framework\TestCase;
 
@@ -21,8 +23,8 @@ class OrdersListerTest extends TestCase
             ->method('searchAllOrders')
             ->with()
             ->willReturn([
-                Order::create('1', 'order 1', 'mail1@mail.com'),
-                Order::create('2', 'order 2', 'mail2@mail.com')
+                Order::create('1', new OrderName('order 1'), new OrderEmail('mail1@mail.com')),
+                Order::create('2', new OrderName('order 2'), new OrderEmail('mail2@mail.com'))
             ]);
 
         $ordersLister = new OrdersLister($orderRespository);

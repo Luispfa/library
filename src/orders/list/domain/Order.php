@@ -14,7 +14,7 @@ final readonly class Order
     private function __construct(
         public string $id,
         public OrderName $name,
-        public string $email,
+        public OrderEmail $email,
         public string $status,
         public float $totalPrice
     ) {
@@ -23,7 +23,7 @@ final readonly class Order
     public static function create(
         string $id,
         OrderName $name,
-        string $email,
+        OrderEmail $email,
     ): self {
         $status = static::PENDING;
         $totalPrice = 0;
