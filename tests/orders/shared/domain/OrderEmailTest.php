@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Tests\orders\shared\domain;
 
-use orders\shared\domain\exception\OrderEmailInvalidException;
 use orders\shared\domain\OrderEmail;
 use PHPUnit\Framework\TestCase;
+use shared\domain\exception\EmailInvalidException;
 
 final class OrderEmailTest extends TestCase
 {
@@ -18,7 +18,7 @@ final class OrderEmailTest extends TestCase
 
     public function test_order_name_with_invalid_length(): void
     {
-        self::expectException(OrderEmailInvalidException::class);
+        self::expectException(EmailInvalidException::class);
         self::expectExceptionMessage('The email address is not valid.');
 
         new OrderEmail('ThisIsNotEmail');

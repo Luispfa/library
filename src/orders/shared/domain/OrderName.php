@@ -4,19 +4,20 @@ declare(strict_types=1);
 
 namespace orders\shared\domain;
 
-use Exception;
 use orders\shared\domain\exception\OrderNameLengthException;
+use shared\domain\StringValueObject;
 
-readonly final class OrderName
+final class OrderName extends StringValueObject
 {
-    public function __construct(public string $value)
+    public function __construct(protected string $value)
     {
-        $this->validateLength($value);
+        parent::__construct($value);
+        $this->ensureIsValidateLength();
     }
 
-    private function validateLength(string $value): void
+    private function ensureIsValidateLength(): void
     {
-        if (strlen($value) > 50) {
+        if (strlen($this->value()) > 50) {
             throw new OrderNameLengthException();
         }
     }

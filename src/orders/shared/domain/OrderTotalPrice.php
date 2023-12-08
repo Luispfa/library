@@ -13,7 +13,7 @@ final class OrderTotalPrice extends FloatValueObject
     public function __construct(protected float $value)
     {
         parent::__construct($value);
-        $this->validatePositiveValue();
+        $this->ensureIsPositiveValue();
     }
 
     public static function initialize(): self
@@ -26,7 +26,7 @@ final class OrderTotalPrice extends FloatValueObject
         return number_format($this->value(), static::DECIMAL_COUNT, '.', '');
     }
 
-    private function validatePositiveValue(): void
+    private function ensureIsPositiveValue(): void
     {
         if ($this->value() < 0) {
             throw new \InvalidArgumentException('Amount needs to be positive');

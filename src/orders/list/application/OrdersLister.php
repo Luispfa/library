@@ -32,8 +32,8 @@ final readonly class OrdersLister
     {
         return static fn (Order $order) => new OrderResponse(
             $order->id->value(),
-            $order->name->value,
-            $order->email->value,
+            $order->name->value(),
+            $order->email->value(),
             $order->status->value(),
             $order->totalPrice->value()
         );

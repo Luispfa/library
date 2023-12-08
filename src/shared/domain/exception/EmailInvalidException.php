@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace orders\shared\domain\exception;
+namespace shared\domain\exception;
 
 use InvalidArgumentException;
 
-class OrderEmailInvalidException extends InvalidArgumentException
+class EmailInvalidException extends InvalidArgumentException
 {
     public function __construct()
     {
