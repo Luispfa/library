@@ -16,7 +16,7 @@ final readonly class Order
         public OrderName $name,
         public OrderEmail $email,
         public string $status,
-        public float $totalPrice
+        public OrderTotalPrice $totalPrice
     ) {
     }
 
@@ -26,7 +26,7 @@ final readonly class Order
         OrderEmail $email,
     ): self {
         $status = static::PENDING;
-        $totalPrice = 0;
+        $totalPrice = OrderTotalPrice::initialize();
         return new self($id, $name, $email, $status, $totalPrice);
     }
 }
