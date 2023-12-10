@@ -19,7 +19,7 @@ doctrine:
                 is_bundle: false
                 type: xml
                 dir: '%kernel.project_dir%/src/orders/list/infrastructure/repositories/persistence/doctrine/mapping'
-                prefix: 'orders\list\domain'
+                prefix: 'orders\shared\domain'
                 alias: orders
 
 when@test:

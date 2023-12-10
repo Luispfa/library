@@ -7,10 +7,10 @@ namespace App\Tests\orders\list\application;
 use orders\list\application\OrdersLister;
 use orders\list\application\response\OrderResponse;
 use orders\list\application\response\OrdersResponse;
-use orders\list\domain\exception\OrdersNotFoundException;
-use orders\list\domain\Order;
-use orders\list\domain\OrderEmail;
-use orders\list\domain\OrderName;
+use orders\shared\domain\exception\OrdersNotFoundException;
+use orders\shared\domain\Order;
+use orders\shared\domain\OrderEmail;
+use orders\shared\domain\OrderName;
 use orders\list\domain\OrdersListerRepository;
 use PHPUnit\Framework\TestCase;
 

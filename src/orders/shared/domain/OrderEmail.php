@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace orders\list\domain;
+namespace orders\shared\domain;
 
-use orders\list\domain\exception\OrderEmailInvalidException;
+use orders\shared\domain\exception\OrderEmailInvalidException;
 
 readonly final class OrderEmail
 {

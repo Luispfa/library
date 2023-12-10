@@ -6,8 +6,8 @@ namespace orders\list\application;
 
 use orders\list\application\response\OrderResponse;
 use orders\list\application\response\OrdersResponse;
-use orders\list\domain\exception\OrdersNotFoundException;
-use orders\list\domain\Order;
+use orders\shared\domain\exception\OrdersNotFoundException;
+use orders\shared\domain\Order;
 use orders\list\domain\OrdersListerRepository;
 
 use function Lambdish\Phunctional\map;

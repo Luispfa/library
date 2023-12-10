@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace orders\list\domain;
+namespace orders\shared\domain;
 
 use Exception;
-use orders\list\domain\exception\OrderNameLengthException;
+use orders\shared\domain\exception\OrderNameLengthException;
 
 readonly final class OrderName
 {

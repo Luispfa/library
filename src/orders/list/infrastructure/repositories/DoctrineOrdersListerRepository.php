@@ -2,7 +2,7 @@
 
 namespace orders\list\infrastructure\repositories;
 
-use orders\list\domain\Order;
+use orders\shared\domain\Order;
 use orders\list\domain\OrdersListerRepository;
 use orders\list\infrastructure\repositories\persistence\doctrine\DoctrineRepository;
 

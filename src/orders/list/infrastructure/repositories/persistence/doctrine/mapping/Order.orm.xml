@@ -2,7 +2,7 @@
 <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
-    <entity name="orders\list\domain\Order"
+    <entity name="orders\shared\domain\Order"
             table="`order`">
         <id name="id"
             type="string"
@@ -10,10 +10,10 @@
             <generator strategy="NONE" />
         </id>
         <embedded name="name"
-                  class="orders\list\domain\OrderName"
+                  class="orders\shared\domain\OrderName"
                   use-column-prefix="false" />
         <embedded name="email"
-                  class="orders\list\domain\OrderEmail"
+                  class="orders\shared\domain\OrderEmail"
                   use-column-prefix="false" />
         <field name="status"
                type="string"

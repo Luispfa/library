@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\orders\list\domain;
+namespace App\Tests\orders\shared\domain;
 
-use orders\list\domain\exception\OrderEmailInvalidException;
-use orders\list\domain\OrderEmail;
+use orders\shared\domain\exception\OrderEmailInvalidException;
+use orders\shared\domain\OrderEmail;
 use PHPUnit\Framework\TestCase;
 
 final class OrderEmailTest extends TestCase

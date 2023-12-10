@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\orders\list\domain;
+namespace App\Tests\orders\shared\domain;
 
-use orders\list\domain\exception\OrderNameLengthException;
-use orders\list\domain\OrderName;
+use orders\shared\domain\exception\OrderNameLengthException;
+use orders\shared\domain\OrderName;
 use PHPUnit\Framework\TestCase;
 
 final class OrderNameTest extends TestCase

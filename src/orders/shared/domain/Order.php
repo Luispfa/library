@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace orders\list\domain;
+namespace orders\shared\domain;
 
 final readonly class Order
 {
