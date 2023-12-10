@@ -31,7 +31,7 @@ final readonly class OrdersLister
     private function toResponse(): callable
     {
         return static fn (Order $order) => new OrderResponse(
-            $order->id,
+            $order->id->value(),
             $order->name->value,
             $order->email->value,
             $order->totalPrice->value()

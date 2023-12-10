@@ -4,11 +4,9 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
     <entity name="orders\shared\domain\Order"
             table="`order`">
-        <id name="id"
-            type="string"
-            column="id">
-            <generator strategy="NONE" />
-        </id>
+        <embedded name="id"
+                  class="orders\shared\domain\OrderId"
+                  use-column-prefix="false" />
         <embedded name="name"
                   class="orders\shared\domain\OrderName"
                   use-column-prefix="false" />
