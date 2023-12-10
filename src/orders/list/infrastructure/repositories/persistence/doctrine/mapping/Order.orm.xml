@@ -20,9 +20,8 @@
                column="status"
                length="255"
                nullable="false" />
-        <field name="totalPrice"
-               type="string"
-               column="total_price"
-               nullable="false" />
+        <embedded name="totalPrice"
+                  class="orders\shared\domain\OrderTotalPrice"
+                  use-column-prefix="false" />
     </entity>
 </doctrine-mapping>

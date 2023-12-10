@@ -34,7 +34,7 @@ final readonly class OrdersLister
             $order->id,
             $order->name->value,
             $order->email->value,
-            $order->totalPrice
+            $order->totalPrice->value()
         );
     }
 }
