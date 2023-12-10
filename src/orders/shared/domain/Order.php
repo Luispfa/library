@@ -12,7 +12,7 @@ final readonly class Order
     const DELIVERED = 'Delivered';
 
     private function __construct(
-        public string $id,
+        public OrderId $id,
         public OrderName $name,
         public OrderEmail $email,
         public string $status,
@@ -21,7 +21,7 @@ final readonly class Order
     }
 
     public static function create(
-        string $id,
+        OrderId $id,
         OrderName $name,
         OrderEmail $email,
     ): self {
