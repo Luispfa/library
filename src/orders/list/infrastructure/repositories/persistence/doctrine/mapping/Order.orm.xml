@@ -13,11 +13,9 @@
         <embedded name="email"
                   class="orders\shared\domain\OrderEmail"
                   use-column-prefix="false" />
-        <field name="status"
-               type="string"
-               column="status"
-               length="255"
-               nullable="false" />
+        <embedded name="status"
+                  class="orders\shared\domain\OrderStatus"
+                  use-column-prefix="false" />
         <embedded name="totalPrice"
                   class="orders\shared\domain\OrderTotalPrice"
                   use-column-prefix="false" />
