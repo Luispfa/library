@@ -10,4 +10,9 @@ enum StatusEnum: string
     case CONFIRMED = 'Confirmed';
     case SHIPPED = 'Shipped';
     case DELIVERED = 'Delivered';
+
+    public static function isValid(string $status): bool
+    {
+        return in_array($status, array_column(static::cases(), 'value'));
+    }
 }

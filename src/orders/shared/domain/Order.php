@@ -6,16 +6,11 @@ namespace orders\shared\domain;
 
 final readonly class Order
 {
-    const PENDING = 'Pending';
-    const CONFIRMED = 'Confirmed';
-    const SHIPPED = 'Shipped';
-    const DELIVERED = 'Delivered';
-
     private function __construct(
         public OrderId $id,
         public OrderName $name,
         public OrderEmail $email,
-        public string $status,
+        public OrderStatus $status,
         public OrderTotalPrice $totalPrice
     ) {
     }
@@ -25,7 +20,7 @@ final readonly class Order
         OrderName $name,
         OrderEmail $email,
     ): self {
-        $status = static::PENDING;
+        $status = OrderStatus::initialize();
         $totalPrice = OrderTotalPrice::initialize();
         return new self($id, $name, $email, $status, $totalPrice);
     }

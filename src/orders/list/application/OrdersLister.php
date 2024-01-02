@@ -34,6 +34,7 @@ final readonly class OrdersLister
             $order->id->value(),
             $order->name->value,
             $order->email->value,
+            $order->status->value(),
             $order->totalPrice->value()
         );
     }
